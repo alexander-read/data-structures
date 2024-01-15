@@ -20,7 +20,7 @@
 
 A binary search tree is a binary tree whose elements are ordered
 symmetrically. For any node (T l x r), `x` is greater than any
-elements in `l`, and smaller than any elements in `r`.
+elements in `l`, and smaller than any elements in `r` (Okasaki: 11).
 
 If the tree is balanced, most operations take O(log n) for a tree of size n.
 

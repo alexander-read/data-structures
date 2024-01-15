@@ -24,8 +24,9 @@ This performs one comparison per node, and an equality check at the bottom.
 
 Note: Okasaki mentions 'depth' of the tree, but I'm familiar with that only as
 a property of nodes, so I assume him to mean 'length of longest path', namely
-the height of the tree. This seems right, e.g., `member 4 tree` does six
-comparisons, and the height of this tree is six (test with function).
+the height of the tree. Using (e.g.) the old `member` function, `member 4 tree`
+performs seven comparisons, while with the new function, it performs four
+including the final `elem` check. The height of this tree is three:
 
 > tree :: Tree Int
 > tree = T (T (T Leaf 1 Leaf) 2 Leaf) 3
