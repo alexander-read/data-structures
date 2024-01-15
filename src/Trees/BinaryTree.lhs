@@ -1,7 +1,12 @@
 > {-# OPTIONS_GHC -Wall -Werror #-}
 > {-# OPTIONS_GHC -Wno-name-shadowing #-}
 
-> module Trees.BinaryTree where
+> module Trees.BinaryTree ( Tree(..),
+>                           sizeTree,
+>                           heightTree,
+>                           leavesTree,
+>                           depthTree,
+>                         ) where
 
 > import qualified Trees.Monoid as M
 
