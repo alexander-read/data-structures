@@ -14,14 +14,12 @@
 
 We define some useful functions for folding over trees.
 
-TODO: how does fold fusion work when the thing mapped has a newtype wrapper?
-
 {--------------------------------------------------------------------------}
 {-- Functions on Trees --}
 
 > -- | Smullyan's blackbird combinator (cf. Amar Shah)
 > (...) :: (c -> d) -> (a -> b -> c) -> a -> b -> d
-> (...) = (.) . (.)
+> (...) = (.) . (.) -- \ f g x y . f (g x y)
 
 Functions for our trees, but we may as well make them work for any foldable:
 
