@@ -1,17 +1,25 @@
-> {-# OPTIONS_GHC -Wall -Werror #-}
+> {-# OPTIONS_GHC -Wall               #-}
+> {-# OPTIONS_GHC -Werror             #-}
 > {-# OPTIONS_GHC -Wno-name-shadowing #-}
 
-> module Trees.FiniteMap ( UnbalancedMap,
->                          empty',
->                          update,
->                          lookup,
->                        ) where
+> ----------------------------------------------------------------------------
+> -- |
+> -- Module      : Trees.FiniteMap
+> -- Description : An implementation of a Finite Map using Binary Search Trees
+> --
+> -- TODO: add improvements from the exercise code
+> --
+> ----------------------------------------------------------------------------
+> module Trees.FiniteMap
+>   ( UnbalancedMap
+>   , empty'
+>   , update
+>   , lookup
+>   ) where
 
 > import Prelude hiding ( lookup )
 
 > import Trees.BinaryTree ( Tree(..) )
-
-TODO: add improvements from the exercise code.
 
 {------------------------------------------------------------------------}
 {-- Implementing Finite Maps --}
