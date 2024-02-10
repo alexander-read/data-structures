@@ -1,6 +1,13 @@
-> {-# OPTIONS_GHC -Wall -Werror #-}
+> {-# OPTIONS_GHC -Wall               #-}
+> {-# OPTIONS_GHC -Werror             #-}
 > {-# OPTIONS_GHC -Wno-name-shadowing #-}
 
+> ----------------------------------------------------------------------------
+> -- |
+> -- Module      : Trees.Exercises
+> -- Description : Solutions to the Exercises in Okasaki (1998, Ch.2)
+> --
+> ----------------------------------------------------------------------------
 > module Trees.Exercises where
 
 > import Trees.BinaryTree ( Tree(..) )
