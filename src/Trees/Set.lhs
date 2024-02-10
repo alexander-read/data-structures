@@ -1,9 +1,19 @@
-> {-# OPTIONS_GHC -Wall -Werror #-}
+> {-# OPTIONS_GHC -Wall   #-}
+> {-# OPTIONS_GHC -Werror #-}
 
-> module Trees.Set ( empty,
->                    member,
->                    insert,
->                  ) where
+> ----------------------------------------------------------------------------
+> -- |
+> -- Module      : Trees.Set
+> -- Description : An implementation of the Set ADT using Binary Search Trees
+> --
+> -- TODO: define `delete` function
+> --
+> ----------------------------------------------------------------------------
+> module Trees.Set
+>   ( empty
+>   , member
+>   , insert
+>   ) where
 
 > import Trees.BinaryTree ( Tree(..) )
 
@@ -15,8 +25,6 @@
 >   empty  :: Ord a => s a
 >   insert :: Ord a => a -> s a -> s a
 >   member :: Ord a => a -> s a -> Bool
-
-We can represent `Set`s using binary search trees.
 
 > instance Ord a => Set Tree a where
 >     empty = Leaf
