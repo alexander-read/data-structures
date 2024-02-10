@@ -1,17 +1,25 @@
-> {-# OPTIONS_GHC -Wall -Werror #-}
+> {-# OPTIONS_GHC -Wall               #-}
+> {-# OPTIONS_GHC -Werror             #-}
 > {-# OPTIONS_GHC -Wno-name-shadowing #-}
 
-> module Trees.BinaryTree ( Tree(..),
->                           sizeTree,
->                           heightTree,
->                           leavesTree,
->                           depthTree,
->                         ) where
+> ----------------------------------------------------------------------------
+> -- |
+> -- Module      : Trees.BinaryTree
+> -- Description : The Binary Tree Data Structure
+> --
+> ----------------------------------------------------------------------------
+> module Trees.BinaryTree
+>   ( Tree(..)
+>   , sizeTree
+>   , heightTree
+>   , leavesTree
+>   , depthTree
+>   ) where
 
-> import qualified Trees.Monoid as M
+> import qualified Data.Monoid as M
 
 {------------------------------------------------------------------------}
-{-- Binary Search Trees --}
+{-- Binary Trees --}
 
 > -- | Binary tree with values stored only in nodes, not leaves.
 > data Tree a = Leaf
@@ -40,7 +48,7 @@ If the tree is balanced, most operations take O(log n) for a tree of size n.
 >   traverse f (T l x r) = T <$> traverse f l <*> f x <*> traverse f r
 
 {--------------------------------------------------------------------------}
-{-- Functions on Binary Search Trees --}
+{-- Utility Functions --}
 
 > -- | Count the number of branches
 > sizeTree :: Tree a -> Int
